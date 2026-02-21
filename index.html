@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fyscom</title>
+    <link rel="icon" type="image/x-icon" href="/img/logo.ico" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS (Usando CDN para configuración rápida como en tu código original) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#031a77",
+              "primary-hover": "#02123B",
+              accent: "#FF3029",
+              "accent-red": "#FF3029",
+              action: "#FF3029",
+              "corporate-blue": "#031a77",
+              "header-blue": "#032376",
+              "header-bg": "#02123B",
+              "background-light": "#f5f6f8",
+              "background-dark": "#0f1323",
+              "surface-light": "#ffffff",
+              "surface-dark": "#1a1f33",
+              "text-main": "#0d101c",
+              "text-sub": "#4b5563",
+              "text-dark": "#3A3A3A",
+              "accent-grey": "#CDD3E4",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .no-scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+
+      /* Logo Slider Carousel */
+      @keyframes logo-scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .logo-slider-track {
+        display: flex;
+        align-items: center;
+        width: max-content;
+        animation: logo-scroll 25s linear infinite;
+      }
+      .logo-slider-track:hover {
+        animation-play-state: paused;
+      }
+      .logo-slider-item {
+        filter: grayscale(100%);
+        opacity: 0.5;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .logo-slider-item:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-bg-light text-text-main antialiased selection:bg-brand-red/20 selection:text-brand-red dark:bg-bg-dark dark:text-text-dark"
+  >
+    <div id="root"></div>
+    <!-- Esta línea es CRUCIAL para Vite -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

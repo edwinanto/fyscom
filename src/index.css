@@ -1,0 +1,39 @@
+/* Logo Slider */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-slider-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+}
+
+.logo-slider-track:hover {
+  animation-play-state: paused;
+}
+
+.logo-slider-item {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: all 0.4s ease;
+}
+
+.logo-slider-item:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.animate-marquee {
+  animation: scroll 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
