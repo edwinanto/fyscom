@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logoIcon from '../public/img/logo.ico';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -26,7 +27,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 
                 <span className="material-symbols-outlined text-2xl">precision_manufacturing</span>
               </div>*/}
-              <img src="../public/img/logo.ico" alt="Logo" width={50} height={50} />
+              <img src={logoIcon} alt="Logo" width={50} height={50} />
               <div className="flex flex-col">
                 <span className="text-xl font-bold tracking-tight text-corporate leading-none">Fyscom</span>
                 <span className="text-xs font-semibold tracking-wider text-gray-500 uppercase">Soluciones Integrales para la Industria</span>
@@ -120,7 +121,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <div className="flex items-center justify-center size-10 rounded-lg bg-white text-primary">
-                  <span className="material-symbols-outlined text-2xl"><img src="../public/img/logo.ico" alt="Logo" width={30} height={30} /></span>
+                  <span className="material-symbols-outlined text-2xl"><img src={logoIcon} alt="Logo" width={30} height={30} /></span>
                 </div>
                 <span className="text-xl font-bold tracking-tight">Fyscom</span>
               </div>
